@@ -179,7 +179,7 @@ async def pspam(e):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         rizoel = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(rizoel) == 1:
-            counter = int(rizoel[0])
+            counter = int(hwbotsupport[0])
             if int(e.chat_id) in GROUP:
                 text = f"Sorry !! I can't spam here"
                 await e.reply(text, parse_mode=None, link_preview=None )
@@ -209,7 +209,7 @@ async def hang(e):
     if e.sender_id in SUDO_USERS:
         RiZoeL = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(RiZoeL) == 1:
-            counter = int(RiZoeL[0])
+            counter = int(hwbotsupport[0])
             if int(e.chat_id) in GROUP:
                 text = f"Sorry !! I can't spam here"
                 await e.reply(text, parse_mode=None, link_preview=None )
