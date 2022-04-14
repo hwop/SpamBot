@@ -35,8 +35,8 @@ async def spam(e):
             user = str(RiZoeL[1])
             a = await e.client.get_entity(user)
             g = a.id
-            if int(g) in RiZoeLX:
-                text = f"I can't raid on @RiZoeLX's Owner"
+            if int(g) in iamhackerworld:
+                text = f"I can't raid on @iamhackerworld's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
@@ -58,8 +58,8 @@ async def spam(e):
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
-            if int(g) in RiZoeLX:
-                text = f"I can't raid on @RiZoeLX's Owner"
+            if int(g) in iamhackerworld:
+                text = f"I can't raid on @iamhackerworld's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
@@ -149,8 +149,8 @@ async def _(e):
             umser = await e.client.get_entity(a.sender_id)
             user_idd = umser.id
             user_id = int(user_idd)
-            if int(user_id) in RiZoeLX:
-                text = f" can't raid on @RiZoeLX's Owner."
+            if int(user_id) in iamhackerworld:
+                text = f" can't raid on @iamhackerworld's Owner."
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(user_id) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
@@ -232,8 +232,8 @@ async def _(event):
              user = str(RiZoeL[2])
              a = await event.client.get_entity(user)
              e = a.id
-             if int(e) in RiZoeLX:
-                    text = f"I can't raid on @RiZoeLX's Owner"
+             if int(e) in iamhackerworld:
+                    text = f"I can't raid on @iamhackerworld's Owner"
                     await event.reply(text, parse_mode=None, link_preview=None )
              elif int(e) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
@@ -256,8 +256,8 @@ async def _(event):
                a = await event.get_reply_message()
                b = await event.client.get_entity(a.sender_id)
                e = b.id
-               if int(e) in RiZoeLX:
-                       text = f"I can't raid on @RiZoeLX's Owner"
+               if int(e) in iamhackerworld:
+                       text = f"I can't raid on @iamhackerworld's Owner"
                        await event.reply(text, parse_mode=None, link_preview=None )
                elif int(e) == OWNER_ID:
                        text = f"This guy is a owner Of this Bots."
