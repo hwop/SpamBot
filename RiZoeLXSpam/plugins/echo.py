@@ -6,7 +6,7 @@ import requests
 from telethon import events
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from RiZoeLXSpam import Riz, Riz2, Riz3, Riz4, Riz5 , Riz6, Riz7, Riz8, Riz9, Riz10, SUDO_USERS, OWNER_ID
+from RiZoeLXSpam import Riz, Riz2, Riz3, Riz4, Riz5 , Riz6, Riz7, Riz8, Riz9, Riz10, Riz11, SUDO_USERS, OWNER_ID
 
 from RiZoeLXSpam import CMD_HNDLR as hl
 from RiZoeLXSpam.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
@@ -23,6 +23,7 @@ from resources.data import RiZoeLX
 @Riz8.on(events.NewMessage(incoming=True, pattern=r"\%saddecho(?: |$)(.*)" % hl))
 @Riz9.on(events.NewMessage(incoming=True, pattern=r"\%saddecho(?: |$)(.*)" % hl))
 @Riz10.on(events.NewMessage(incoming=True, pattern=r"\%saddecho(?: |$)(.*)" % hl))
+@Riz11.on(events.NewMessage(incoming=True, pattern=r"\%saddecho(?: |$)(.*)" % hl))
 async def echo(event):
   usage = f"𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = **ECHO**\n\nCommand:\n\n `{hl}addecho <reply to a User>`"
   if event.sender_id in SUDO_USERS:
@@ -64,6 +65,7 @@ async def echo(event):
 @Riz8.on(events.NewMessage(incoming=True, pattern=r"\%srmecho(?: |$)(.*)" % hl))
 @Riz9.on(events.NewMessage(incoming=True, pattern=r"\%srmecho(?: |$)(.*)" % hl))
 @Riz10.on(events.NewMessage(incoming=True, pattern=r"\%srmecho(?: |$)(.*)" % hl))
+@Riz11.on(events.NewMessage(incoming=True, pattern=r"\%srmecho(?: |$)(.*)" % hl))
 async def echo(event):
   usage = f"𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = **ECHO**\n\nCommand:\n\n `{hl}rmecho <reply to a User>`"
   if event.sender_id in SUDO_USERS or event.sender_id in DEV:
@@ -96,6 +98,7 @@ async def echo(event):
 @Riz8.on(events.NewMessage(incoming=True))
 @Riz9.on(events.NewMessage(incoming=True))
 @Riz10.on(events.NewMessage(incoming=True))
+@Riz11.on(events.NewMessage(incoming=True))
 async def _(e):
     if is_echo(e.sender_id, e.chat_id):
         await asyncio.sleep(0.5)
