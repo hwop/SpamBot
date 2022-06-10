@@ -1,4 +1,4 @@
-from RiZoeLXSpam import Riz, Riz2, Riz3, Riz4, Riz5, Riz6, Riz7, Riz8, Riz9, Riz10, SUDO_USERS
+from RiZoeLXSpam import Riz, Riz2, Riz3, Riz4, Riz5, Riz6, Riz7, Riz8, Riz9, Riz10, Riz11, SUDO_USERS
 from telethon import events, Button
 from telethon.tl.custom import button
 from time import time
@@ -20,6 +20,7 @@ Riz_Help = "__Click On Below Buttons for help__"
 @Riz8.on(events.NewMessage(incoming=True, pattern=r"\%shelp(?: |$)(.*)" % hl))
 @Riz9.on(events.NewMessage(incoming=True, pattern=r"\%shelp(?: |$)(.*)" % hl))
 @Riz10.on(events.NewMessage(incoming=True, pattern=r"\%shelp(?: |$)(.*)" % hl))
+@Riz11.on(events.NewMessage(incoming=True, pattern=r"\%shelp(?: |$)(.*)" % hl))
 async def help(event):
     if event.sender_id in SUDO_USERS:
        await event.client.send_file(event.chat_id,
@@ -136,6 +137,7 @@ i) {hl}hang <counter> (you can reply any message if you want bot to reply that m
 @Riz8.on(events.CallbackQuery(pattern=r"help_back"))
 @Riz9.on(events.CallbackQuery(pattern=r"help_back"))
 @Riz10.on(events.CallbackQuery(pattern=r"help_back"))
+@Riz11.on(events.CallbackQuery(pattern=r"help_back"))
 async def helpback(event):
    if event.query.user_id in SUDO_USERS:    
       await event.edit(
@@ -171,6 +173,7 @@ async def helpback(event):
 @Riz8.on(events.CallbackQuery(pattern=r"spam"))
 @Riz9.on(events.CallbackQuery(pattern=r"spam"))
 @Riz10.on(events.CallbackQuery(pattern=r"spam"))
+@Riz11.on(events.CallbackQuery(pattern=r"spam"))
 async def help_spam(event):
    if event.query.user_id in SUDO_USERS:    
        await event.edit(
@@ -198,6 +201,7 @@ async def help_spam(event):
 @Riz8.on(events.CallbackQuery(pattern=r"raid"))
 @Riz9.on(events.CallbackQuery(pattern=r"raid"))
 @Riz10.on(events.CallbackQuery(pattern=r"raid"))
+@Riz11.on(events.CallbackQuery(pattern=r"raid"))
 async def help_raid(event):
      if event.query.user_id in SUDO_USERS:
         await event.edit(
