@@ -110,6 +110,7 @@ async def ping(e):
 @Riz8.on(events.NewMessage(incoming=True, pattern=r"\%srestart(?: |$)(.*)" % hl))
 @Riz9.on(events.NewMessage(incoming=True, pattern=r"\%srestart(?: |$)(.*)" % hl))
 @Riz10.on(events.NewMessage(incoming=True, pattern=r"\%srestart(?: |$)(.*)" % hl))
+@Riz11.on(events.NewMessage(incoming=True, pattern=r"\%srestart(?: |$)(.*)" % hl))
 async def restart(e):
     if e.sender_id in SUDO_USERS:
         text = "**Restarting Your Hw Bot Spam**.. Please Wait Until It Starts Again"
@@ -152,6 +153,10 @@ async def restart(e):
             pass
         try:
             await Riz10.disconnect()
+        except Exception:
+            pass
+        try:
+            await Riz11.disconnect()
         except Exception:
             pass
 
